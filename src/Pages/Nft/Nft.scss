@@ -1,0 +1,153 @@
+@import './../../variables';
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+  }
+
+.nft{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2em; 
+    padding-top:2em;
+
+    .column>div{ 
+        @include flex(column);
+        border-radius:1em;
+        overflow: hidden;
+        @include themify($themes){
+            background-color: themed('headerBackground');
+            color:themed('textColor');
+            box-shadow:themed('shadow');
+        }
+        margin-bottom: 20px;
+        padding:1em;
+    }
+
+    .column{
+        .image-container{
+            padding:0;
+            img{
+                width:100%;
+                height:auto;
+            }
+
+        }
+
+        .info-container{ 
+            @include flex(column);
+            >div{padding:0.7em 0;}
+            h1{
+                padding-bottom: 0.7em;
+            }
+            .likes{ 
+                @include flex(row);
+                justify-content: end;
+                div{
+                    padding:0.5em;
+                    border-radius:12px;
+                    @include themify($themes){
+                        background-color: themed('backgroundColor');
+                    }
+                }
+                div:first-child{
+                    margin-right:1em;
+                }
+            }
+            .creator{ 
+                @include flex(row);
+                justify-content:space-around;
+            }
+            .links{ 
+                @include flex(row);
+                flex-wrap: wrap;
+                gap:5px;
+                div{ 
+                    @include flex(row);
+                    gap:5px;
+                    align-items: center;
+                    justify-content: center;
+                    padding:5px;
+                    border:1px solid lightgray;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+            .license, .collection{
+                border-top: 1px solid lightgray;
+                font-size: 1.3em;
+            }
+            .collection{ 
+                border-bottom:1px solid lightgray;
+            }
+        }
+
+        .attributes-container{
+            display: grid;
+            grid-template-columns: auto auto auto; 
+            font-size: 0.9em; 
+
+            >div{ 
+                min-width: 80px;
+                margin: 8px 2px;
+                >div{
+                    border:1px solid $blue;
+                    padding:8px;
+                    overflow: hidden;
+                }
+                >div:first-child{
+                    background-color: $blue;
+                    border-radius: 5px 5px 0 0;
+                }
+                >div:last-child{
+                    border-radius: 0 0 5px 5px ;
+                }
+                
+            }
+        }
+
+        .price-container{
+            >div,>p{padding:0.7em;}
+            >div{border-bottom: $btnLine;}
+            .price{
+                font-size: 2em;
+                font-weight: 600;
+                color: $blue;
+            }
+            button{
+                padding:0.8em;
+                border:none;
+                font-size: 0.9em;
+                font-weight: 800;
+                background-color: $pink;
+                border-radius: 12px;
+                color:white;
+                cursor: pointer;
+            }
+            .sellerKey{
+                font-size: 1.1em;
+                span{color:$blue}
+            }
+            >p:last-child{
+                text-align: center;
+            }
+            
+        }
+
+    }
+
+
+} 
+
+
+@media only screen and (max-width: 968px) {
+    .sellerKey span{
+        display: block;
+        max-width: 200px; 
+    }
+}
+@media only screen and (max-width: 680px) {
+    .nft{
+        grid-template-columns: auto;
+    }
+    
+}

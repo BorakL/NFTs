@@ -1,0 +1,82 @@
+@import './variables';
+*{
+    margin:0;
+    padding:0
+} 
+ 
+
+body{
+    @include themify($themes){
+        background-color: themed('backgroundColor');
+    }
+    padding-top: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: calc(100% - 3em);
+    max-width: 1280px;
+    margin:0 1.5em;
+  }
+
+select{
+    min-width: 100px;
+    padding:0.4em;
+    font-size: 1em;
+    border:1px solid gainsboro;
+    border-radius: 0.3em;
+    margin:0.3em;
+    @include themify($themes){
+        color: themed('textColor');
+        background-color: themed('backgroundColor');
+    } 
+} 
+
+input{
+    background-color: transparent;
+    @include themify($themes){
+        color: themed('textColor');
+    }
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    background-color:transparent;
+    img{ 
+        height:50px;
+        width:auto;
+    }
+  }
+
+  main{
+    @include themify($themes) {
+        background-color: themed('backgroundColor');
+    }
+    min-height: calc(100vh - 300px);
+    padding-bottom: 100px;
+}
+
+footer{
+    background: rgb(59,46,157);
+    background: linear-gradient(24deg, rgb(41, 22, 184) 0%, rgb(17, 96, 112) 76%, rgb(26, 61, 68) 100%); 
+}
+ 
+.pinkColor{
+    color:$pink;
+}
+
+
+@media screen and (min-width:968px){
+    .container{
+        margin:0 auto;
+    }
+}

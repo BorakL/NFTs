@@ -1,0 +1,113 @@
+/*
+ * Theme definitions
+ */
+/*
+   * Implementation of themes
+   */
+.navbar {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.theme-light .navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #222222;
+}
+
+.theme-dark .navbar {
+  background-color: rgba(85, 85, 85, 0.8);
+  color: #e6e6e6;
+}
+
+.navbar .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container .navbar_logo img {
+  width: auto;
+  height: 3em;
+}
+
+.navbar .container .navbar_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container .navbar_menu > ul {
+  display: none;
+}
+
+.navbar .container .navbar_menu > ul li, .navbar .container .navbar_menu > ul .navbar_icon_menu {
+  display: inline-block;
+  padding: 5px 25px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .container .navbar_menu > ul li:last-child {
+  background-color: #e25de2;
+  border-radius: 1em;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar .container .navbar_menu > ul li:not(:last-child):hover {
+  border-bottom: 2px solid #e25de2;
+}
+
+.navbar .container .navbar_icon_menu {
+  font-size: 3em;
+}
+
+.navbar .container .navbar_icon_menu svg {
+  cursor: pointer;
+}
+
+.navbar .container .navbar_theme_toggle {
+  background-color: #58a0ff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: yellow;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar .container .navbar_menu > ul {
+    display: block;
+  }
+  .navbar .container .navbar_icon_menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

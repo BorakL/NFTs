@@ -1,0 +1,234 @@
+/*
+ * Theme definitions
+ */
+/*
+   * Implementation of themes
+   */
+.nft {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  padding-top: 2em;
+}
+
+.nft .column > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 1em;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 1em;
+}
+
+.theme-light .nft .column > div {
+  background-color: white;
+  color: #222222;
+  -webkit-box-shadow: 1px 4px 5px 3px rgba(209, 209, 209, 0.45);
+          box-shadow: 1px 4px 5px 3px rgba(209, 209, 209, 0.45);
+}
+
+.theme-dark .nft .column > div {
+  background-color: #464646;
+  color: #e6e6e6;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+          box-shadow: 0px 0px 0px 0px;
+}
+
+.nft .column .image-container {
+  padding: 0;
+}
+
+.nft .column .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.nft .column .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nft .column .info-container > div {
+  padding: 0.7em 0;
+}
+
+.nft .column .info-container h1 {
+  padding-bottom: 0.7em;
+}
+
+.nft .column .info-container .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.nft .column .info-container .likes div {
+  padding: 0.5em;
+  border-radius: 12px;
+}
+
+.theme-light .nft .column .info-container .likes div {
+  background-color: #f0f0f0;
+}
+
+.theme-dark .nft .column .info-container .likes div {
+  background-color: #373737;
+}
+
+.nft .column .info-container .likes div:first-child {
+  margin-right: 1em;
+}
+
+.nft .column .info-container .creator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nft .column .info-container .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+.nft .column .info-container .links div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nft .column .info-container .license, .nft .column .info-container .collection {
+  border-top: 1px solid lightgray;
+  font-size: 1.3em;
+}
+
+.nft .column .info-container .collection {
+  border-bottom: 1px solid lightgray;
+}
+
+.nft .column .attributes-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  font-size: 0.9em;
+}
+
+.nft .column .attributes-container > div {
+  min-width: 80px;
+  margin: 8px 2px;
+}
+
+.nft .column .attributes-container > div > div {
+  border: 1px solid #58a0ff;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.nft .column .attributes-container > div > div:first-child {
+  background-color: #58a0ff;
+  border-radius: 5px 5px 0 0;
+}
+
+.nft .column .attributes-container > div > div:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.nft .column .price-container > div, .nft .column .price-container > p {
+  padding: 0.7em;
+}
+
+.nft .column .price-container > div {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.nft .column .price-container .price {
+  font-size: 2em;
+  font-weight: 600;
+  color: #58a0ff;
+}
+
+.nft .column .price-container button {
+  padding: 0.8em;
+  border: none;
+  font-size: 0.9em;
+  font-weight: 800;
+  background-color: #e25de2;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.nft .column .price-container .sellerKey {
+  font-size: 1.1em;
+}
+
+.nft .column .price-container .sellerKey span {
+  color: #58a0ff;
+}
+
+.nft .column .price-container > p:last-child {
+  text-align: center;
+}
+
+@media only screen and (max-width: 968px) {
+  .sellerKey span {
+    display: block;
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .nft {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+/*# sourceMappingURL=Nft.css.map */

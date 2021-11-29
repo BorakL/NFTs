@@ -1,0 +1,95 @@
+@import "./../../../../variables";
+
+.main{
+    padding: 30px 0;   
+}
+.main .grid{ 
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 300px));
+    justify-content: center;
+    grid-gap: 1.5em ;  
+    align-items: center;
+    
+    .card{ 
+        //background-color: $headerBackground;
+        @include themify($themes){
+            background-color: themed('headerBackground');
+            color:themed('textColor');
+            box-shadow:themed('shadow');
+        }
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        border:3px solid $blue;
+        border-radius: 1em; 
+        padding: 1em; 
+
+        
+
+        div{
+            padding:3px 0;
+        }
+
+        .card-header{
+            border-bottom: $btnLine; 
+        }
+        
+        .card-img{
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 250px;  
+                border-bottom: $btnLine; 
+            }
+            
+            img{  
+                width: 95%;
+                max-height: 95%;
+                transition: 400ms;
+            }
+            img:hover{
+                width:100%;
+                max-height: 100%;
+                cursor: pointer;
+            }
+        }
+
+        .card-info{
+            .price{
+                text-align: center;
+                font-size: 1.3em;  
+                font-weight: 500;  
+                border-bottom: $btnLine;
+                color:$blue
+            }
+
+            .otherInfo{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+             
+                svg{
+                    font-size:1.2em;
+                    margin-right: 5px;
+                }
+
+                div>div{
+                    display: flex;
+                }
+
+                .license{
+                    font-size: 0.9em; 
+                }
+                .likes{
+                    font-size: 1.1em;
+                }
+            }
+        }
+        
+    }
+
+
+}
+ 

@@ -1,0 +1,41 @@
+/*
+ * Theme definitions
+ */
+/*
+   * Implementation of themes
+   */
+.footer {
+  width: 100%;
+  background-color: transparent;
+  height: auto;
+  padding: 25px 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer ul > li:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 2em;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

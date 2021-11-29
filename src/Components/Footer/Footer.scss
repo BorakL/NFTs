@@ -1,0 +1,25 @@
+@import "./../../variables";
+.footer{
+    width: 100%;
+    background-color: transparent;
+    height: auto;
+    padding: 25px 0;   
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    ul>li:hover{
+       cursor: pointer;
+    }
+
+    
+}
+@media screen and (max-width:1024px){
+    .footer{
+        justify-content: start;
+        gap:2em;
+    }
+}

@@ -1,0 +1,131 @@
+/*
+ * Theme definitions
+ */
+/*
+   * Implementation of themes
+   */
+.main {
+  padding: 30px 0;
+}
+
+.main .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 300px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .grid .card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px solid #58a0ff;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.theme-light .main .grid .card {
+  background-color: white;
+  color: #222222;
+  -webkit-box-shadow: 1px 4px 5px 3px rgba(209, 209, 209, 0.45);
+          box-shadow: 1px 4px 5px 3px rgba(209, 209, 209, 0.45);
+}
+
+.theme-dark .main .grid .card {
+  background-color: #464646;
+  color: #e6e6e6;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+          box-shadow: 0px 0px 0px 0px;
+}
+
+.main .grid .card div {
+  padding: 3px 0;
+}
+
+.main .grid .card .card-header {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.main .grid .card .card-img a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 250px;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.main .grid .card .card-img img {
+  width: 95%;
+  max-height: 95%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.main .grid .card .card-img img:hover {
+  width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.main .grid .card .card-info .price {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  border-bottom: 1px solid #d4d4d4;
+  color: #58a0ff;
+}
+
+.main .grid .card .card-info .otherInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .grid .card .card-info .otherInfo svg {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+.main .grid .card .card-info .otherInfo div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .grid .card .card-info .otherInfo .license {
+  font-size: 0.9em;
+}
+
+.main .grid .card .card-info .otherInfo .likes {
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=Main.css.map */

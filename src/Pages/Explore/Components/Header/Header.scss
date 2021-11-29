@@ -1,0 +1,130 @@
+@import "./../../../../variables";
+
+$mb-lg:40px;
+  
+
+.header{ 
+    box-shadow: 0px 3px 30px -15px rgba(0,0,0,0.75); 
+    position: relative;  
+    @include themify($themes) {
+        background-color: themed('headerBackground');
+    }
+
+        .search{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding-top: 20px;  
+        
+        //////////// Heading ///////////
+        h1{
+            margin-bottom: $mb-lg; 
+            font-size: calc(2vw + 50px);
+            text-align: center;
+            background: -webkit-linear-gradient(-250deg,#9a58c3 20%,#4156f6,#48dbd9 88%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        /////////// Search-box /////////
+        .search-box{
+            margin-bottom: $mb-lg; 
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;  
+            width:calc(200px + 12vw); 
+            height: 2.5em;
+            border: solid 1px lightgray; 
+            border-radius: 50px; 
+            appearance: none;
+            outline: 0;
+            position: relative;
+            box-sizing: border-box;
+
+
+                input[type=text]{
+                    display: block;
+                    border:0;
+                    line-height: 0;
+                    margin-left: 1em;
+                    height: 100%; 
+                    width: 100%;
+                    min-width:200px; 
+                    outline: 0;
+                    font-size: 1em;
+                }
+
+                .search-button{ 
+                    display: block;
+                    position: absolute; 
+                    right:-1px;
+                    line-height: 2em;
+                    width: 60px; 
+                    height: 100%;
+                    text-align: center; 
+                    border-radius: 0 50px 50px 0;
+                    background-color: #46ffd7;  
+                    color:white;
+                    cursor: pointer;
+                    border:1px solid #46ffd7;
+                    font-size: 1.2em;
+                } 
+        }
+        
+        /////////// Categories ////////////
+        .categories{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            margin-bottom: $mb-lg; 
+
+                .category{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-sizing: border-box;
+                    justify-content: space-around;
+                    padding:10px;
+                    width:120px;
+                    height:80px;
+                    @include themify($themes){
+                        background-color: themed('backgroundColor');
+                        box-shadow: themed('shadow');
+                        color: themed('textColor');
+                    }
+                    border-radius: 12px;
+                    cursor: pointer; 
+
+                    img{
+                        width:2em;
+                        height:2em;
+                    }
+
+                }
+
+                .category:hover{ 
+                    background-color: transparent;
+                    transition: 0.5s;
+                }
+
+
+        }
+
+        ///////// filters //////////
+        .search_filters{
+            border-top:$btnLine;
+            width: 100%; 
+            padding-top: 1em;
+            margin-bottom: 1em;
+        }
+
+
+    }
+
+} 

@@ -1,0 +1,176 @@
+/*
+ * Theme definitions
+ */
+/*
+   * Implementation of themes
+   */
+.header {
+  -webkit-box-shadow: 0px 3px 30px -15px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 30px -15px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.theme-light .header {
+  background-color: white;
+}
+
+.theme-dark .header {
+  background-color: #464646;
+}
+
+.header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 20px;
+}
+
+.header .search h1 {
+  margin-bottom: 40px;
+  font-size: calc(2vw + 50px);
+  text-align: center;
+  background: -webkit-linear-gradient(-250deg, #9a58c3 20%, #4156f6, #48dbd9 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.header .search .search-box {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(200px + 12vw);
+  height: 2.5em;
+  border: solid 1px lightgray;
+  border-radius: 50px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .search .search-box input[type=text] {
+  display: block;
+  border: 0;
+  line-height: 0;
+  margin-left: 1em;
+  height: 100%;
+  width: 100%;
+  min-width: 200px;
+  outline: 0;
+  font-size: 1em;
+}
+
+.header .search .search-box .search-button {
+  display: block;
+  position: absolute;
+  right: -1px;
+  line-height: 2em;
+  width: 60px;
+  height: 100%;
+  text-align: center;
+  border-radius: 0 50px 50px 0;
+  background-color: #46ffd7;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #46ffd7;
+  font-size: 1.2em;
+}
+
+.header .search .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+  margin-bottom: 40px;
+}
+
+.header .search .categories .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  width: 120px;
+  height: 80px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.theme-light .header .search .categories .category {
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 1px 4px 5px 3px rgba(209, 209, 209, 0.45);
+          box-shadow: 1px 4px 5px 3px rgba(209, 209, 209, 0.45);
+  color: #222222;
+}
+
+.theme-dark .header .search .categories .category {
+  background-color: #373737;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+          box-shadow: 0px 0px 0px 0px;
+  color: #e6e6e6;
+}
+
+.header .search .categories .category img {
+  width: 2em;
+  height: 2em;
+}
+
+.header .search .categories .category:hover {
+  background-color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .search .search_filters {
+  border-top: 1px solid #d4d4d4;
+  width: 100%;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+/*# sourceMappingURL=Header.css.map */

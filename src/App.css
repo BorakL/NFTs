@@ -1,0 +1,115 @@
+/*
+ * Theme definitions
+ */
+/*
+   * Implementation of themes
+   */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 100px;
+}
+
+.theme-light body {
+  background-color: #f0f0f0;
+}
+
+.theme-dark body {
+  background-color: #373737;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: calc(100% - 3em);
+  max-width: 1280px;
+  margin: 0 1.5em;
+}
+
+select {
+  min-width: 100px;
+  padding: 0.4em;
+  font-size: 1em;
+  border: 1px solid gainsboro;
+  border-radius: 0.3em;
+  margin: 0.3em;
+}
+
+.theme-light select {
+  color: #222222;
+  background-color: #f0f0f0;
+}
+
+.theme-dark select {
+  color: #e6e6e6;
+  background-color: #373737;
+}
+
+input {
+  background-color: transparent;
+}
+
+.theme-light input {
+  color: #222222;
+}
+
+.theme-dark input {
+  color: #e6e6e6;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.loading img {
+  height: 50px;
+  width: auto;
+}
+
+main {
+  min-height: calc(100vh - 300px);
+  padding-bottom: 100px;
+}
+
+.theme-light main {
+  background-color: #f0f0f0;
+}
+
+.theme-dark main {
+  background-color: #373737;
+}
+
+footer {
+  background: #3b2e9d;
+  background: linear-gradient(24deg, #2916b8 0%, #116070 76%, #1a3d44 100%);
+}
+
+.pinkColor {
+  color: #e25de2;
+}
+
+@media screen and (min-width: 968px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=App.css.map */
